@@ -59,7 +59,7 @@ if original_subject_id in subjects:
 
     for file in original_files:
         new_file = file.replace(original_subject_id, new_subject_id)
-        print(f"Renaming {file} to {new_file}")
+        print(f"Copying {file} to {new_file}")
         if not dry_run:
             make_parent_dir(new_file)
             shutil.copy(file, new_file)
